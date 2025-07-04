@@ -41,4 +41,25 @@ else:
     print("Both scores are equal.")
 print("-" * 40)
 
+#Task 13
+# Get input from the user
+number = int(input("Enter a number: "))
 
+# Define the range
+lower_limit = 10
+upper_limit = 100
+
+# Check if the number is within the range
+if number >= lower_limit and number <= upper_limit:
+    print(f"The number {number} lies between {lower_limit} and {upper_limit}.")
+else:
+    print(f"The number {number} is outside the range {lower_limit} to {upper_limit}.")
+#Task 14
+# Get score input from the user
+score = int(input("Enter your score: "))
+
+# Check if the score is a passing mark
+if score > 50:
+    print("You have passed!")
+else:
+    print("You have not passed.")
