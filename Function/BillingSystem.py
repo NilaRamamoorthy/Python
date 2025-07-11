@@ -1,31 +1,25 @@
 #1. Billing System
+# Global total bill
 total_bill = 0
 
-# Function to add items with name and price using *args
-def add_items(*item_details):
+# Function to add item prices
+def add_items(*prices):
     global total_bill
-    print("\nItems Added:")
-    for item in item_details:
-        name, price = item  # tuple unpacking
-        print(f"- {name}: ₹{price}")
+    for price in prices:
         total_bill += price
     return total_bill
 
-# Function to calculate total
-def calculate_total():
-    global total_bill
-    return total_bill
-
 # Function to apply discount
-def apply_discount(discount_percent):
+def apply_discount(percent):
     global total_bill
-    discount_amount = total_bill * (discount_percent / 100)
-    final_amount = total_bill - discount_amount
-    return final_amount
+    discount_amount = total_bill * (percent / 100)
+    final_total = total_bill - discount_amount
+    return final_total
 
-# Sample usage
-add_items(("Milk", 45), ("Bread", 30), ("Eggs", 60))       # Item name + price
-print(f"\nTotal before discount: ₹{calculate_total()}")
+# --- Example Usage ---
+print("Adding items to the bill...")
+add_items(100, 250, 150)  
+print("Total before discount: ₹", total_bill)
 
-final_price = apply_discount(5)                            # Apply 5% discount
-print(f"Final Price after 5% Discount: ₹{final_price}")
+final_amount = apply_discount(10)  
+print("Total after 10% discount: ₹", final_amount)
