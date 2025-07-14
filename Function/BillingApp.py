@@ -1,32 +1,21 @@
-# Global list to store items
-cart = []
+total = 0
+items = []
 
-# Add item using *args (name, price)
 def add_item(*args):
-    global cart
+    global total
     for item in args:
-        name, price = item
-        cart.append((name, price))
-        print(f"Added: {name} - ₹{price}")
+        items.append(item)
+        total += item[1]
 
-# Calculate total price
 def get_total():
-    return sum(price for _, price in cart)
+    return total
 
-# Apply discount using lambda
 def apply_discount(percent):
-    total = get_total()
-    discount = lambda total: total - (total * percent / 100)
-    return discount(total)
+    discount = lambda t, p: t - (t * p / 100)
+    return discount(total, percent)
 
-add_item(("Milk", 50), ("Bread", 40), ("Eggs", 60))
-
-print("\nCart Summary:")
-for item, price in cart:
-    print(f"- {item}: ₹{price}")
-
-total = get_total()
-print(f"\nTotal: ₹{total}")
-
-final_total = apply_discount(10)
-print(f"Total after 10% discount: ₹{final_total}")
+# Example
+add_item(("Pen", 10), ("Book", 50), ("Pencil", 5))
+print("Items:", items)
+print("Total:", get_total())
+print("After 10% Discount:", apply_discount(10))

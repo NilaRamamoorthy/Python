@@ -1,0 +1,28 @@
+# Global contact dictionary
+contacts = {}
+
+def add_contact(**kwargs):
+    name = kwargs.get("name")
+    if name:
+        contacts[name] = kwargs
+        print(f"Contact '{name}' added successfully!")
+    else:
+        print("Name is required to add a contact.")
+
+def view_all_contacts():
+    print("\nAll Contacts (Sorted):")
+    for name in sorted(contacts):
+        print(f"{name} → {contacts[name]}")
+
+def search_contact(name):
+    return contacts.get(name, "Contact not found.")
+
+# Example Usage:
+add_contact(name="Ravi", phone="9876543210", email="ravi@example.com")
+add_contact(name="Anjali", phone="9123456780", email="anjali@example.com")
+
+view_all_contacts()
+
+print("\nSearch Result:")
+print(search_contact("Anjali"))
+print(search_contact("Meena"))  # Not found
