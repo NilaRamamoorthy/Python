@@ -1,0 +1,28 @@
+# Initial data
+employees = {
+    1001: {"name": "Alice", "dept": "HR", "salary": 50000},
+    1002: {"name": "Bob", "dept": "IT", "salary": 60000}
+}
+
+# 1. Add new employee
+emp_id = 1003
+employees.setdefault(emp_id, {"name": "Charlie", "dept": "Finance", "salary": 55000})
+
+# 2. Update salary
+employees[1001]["salary"] = 52000
+
+# 2. Update department
+employees[1002]["dept"] = "DevOps"
+
+# 3. Delete employee
+employees.pop(1003, None)
+
+# 4. Search employees by department
+dept_search = "DevOps"
+print(f"\nEmployees in {dept_search} Department:")
+for eid, info in employees.items():
+    if info["dept"] == dept_search:
+        print(f"{eid} - {info['name']}")
+
+# 5. Prevent overwriting existing record using setdefault
+employees.setdefault(1002, {"name": "New Guy", "dept": "Sales", "salary": 45000})
