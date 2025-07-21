@@ -1,0 +1,12 @@
+[
+  {
+    "item": "Milk",
+    "category": "Dairy",
+    "bought": false
+  },
+  {
+    "item": "Apples",
+    "category": "Fruits",
+    "bought": true
+  }
+]

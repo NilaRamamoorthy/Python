@@ -1,0 +1,12 @@
+[
+  {
+    "info": ["The Alchemist", "Paulo Coelho", 1988],
+    "genres": ["Fiction", "Philosophy"],
+    "available": true
+  },
+  {
+    "info": ["Python 101", "Michael Driscoll", 2020],
+    "genres": ["Programming", "Education"],
+    "available": false
+  }
+]

@@ -1,0 +1,30 @@
+tasks = [
+    {
+        "title": "Submit assignment",
+        "due_date": "2025-07-20",
+        "priority": "High",
+        "tags": {"college", "urgent"},
+        "completed": False
+    },
+    {
+        "title": "Buy groceries",
+        "due_date": "2025-07-19",
+        "priority": "Medium",
+        "tags": {"personal", "shopping"},
+        "completed": True
+    },
+    {
+        "title": "Doctor Appointment",
+        "due_date": "2025-07-22",
+        "priority": "Low",
+        "tags": {"health"},
+        "completed": False
+    },
+    {
+        "title": "Call John about project",
+        "due_date": "2025-07-18",
+        "priority": "High",
+        "tags": {"work", "follow-up"},
+        "completed": False
+    }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Alice Johnson",
+    "phone": "9876543210",
+    "email": "alice@example.com",
+    "tags": ["friend", "gym"]
+  },
+  {
+    "name": "Bob Smith",
+    "phone": "9123456780",
+    "email": "bob@example.com",
+    "tags": ["work"]
+  }
+]

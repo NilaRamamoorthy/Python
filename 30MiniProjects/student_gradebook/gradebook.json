@@ -1,0 +1,18 @@
+[
+  {
+    "student": [101, "Aarav"],
+    "grades": {
+      "Math": 88,
+      "Science": 91,
+      "English": 85
+    }
+  },
+  {
+    "student": [102, "Diya"],
+    "grades": {
+      "Math": 92,
+      "Science": 89,
+      "English": 90
+    }
+  }
+]
