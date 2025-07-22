@@ -1,0 +1,3 @@
+Python is fun.
+It is powerful.
+Let's learn file handling.
