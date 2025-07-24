@@ -1,0 +1,44 @@
+import logging
+from datetime import datetime
+
+# Setup logging
+logging.basicConfig(filename="login_attempts.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
+
+# Custom Exception
+class LoginFailedError(Exception):
+    pass
+
+# Dummy user credentials
+USER_CREDENTIALS = {
+    "admin": "pass123"
+}
+
+def login_system():
+    attempts = 0
+    max_attempts = 3
+
+    while attempts < max_attempts:
+        try:
+            username = input("Enter username: ").strip()
+            password = input("Enter password: ").strip()
+
+            if username not in USER_CREDENTIALS or USER_CREDENTIALS[username] != password:
+                attempts += 1
+                raise ValueError("Invalid username or password.")
+
+            print("✅ Login successful!")
+            break  # Exit loop if login is successful
+
+        except ValueError as e:
+            logging.error(f"Login attempt {attempts}: {e}")
+            print(f"❌ Attempt {attempts}/{max_attempts}: {e}")
+
+    else:
+        logging.error("Maximum login attempts exceeded.")
+        raise LoginFailedError("🚫 Login failed after 3 attempts.")
+
+# Run the login system
+try:
+    login_system()
+except LoginFailedError as e:
+    print(e)
