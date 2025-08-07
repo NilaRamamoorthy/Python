@@ -1,0 +1,33 @@
+{
+  "start": {
+    "description": "You are at the entrance of a dark forest.",
+    "choices": {
+      "Go north": "clearing",
+      "Go back home": "home"
+    }
+  },
+  "clearing": {
+    "description": "A clearing with a wild boar.",
+    "choices": {
+      "Fight": "victory",
+      "Run away": "start"
+    },
+    "enemy": ["wild boar", 20],
+    "loot": ["boar tusk"]
+  },
+  "victory": {
+    "description": "You defeated the boar! You see a cabin ahead.",
+    "choices": {
+      "Enter cabin": "cabin"
+    }
+  },
+  "home": {
+    "description": "You returned safely. The game ends.",
+    "choices": {}
+  },
+  "cabin": {
+    "description": "Inside the cabin you find treasure.",
+    "choices": {},
+    "loot": ["gold coin", "map"]
+  }
+}

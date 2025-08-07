@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "ingredients": ["pasta", "tomato sauce", "ground beef", "onion", "garlic"],
+    "steps": ["Boil pasta", "Cook beef with sauce", "Combine and serve"]
+  },
+  {
+    "name": "Garlic Bread",
+    "ingredients": ["bread", "garlic", "butter", "parsley"],
+    "steps": ["Spread garlic butter on bread", "Bake until golden", "Garnish with parsley"]
+  }
+]

@@ -1,0 +1,22 @@
+[
+    [
+        {
+            "name": "Alice",
+            "weight": 70,
+            "height": 1.75,
+            "unit": "metric",
+            "bmi": 22.86,
+            "bmi_category": "Normal weight",
+            "health_risk": "Low risk"
+        },
+        {
+            "name": "Bob",
+            "weight": 154,
+            "height": 70,
+            "unit": "imperial",
+            "bmi": 22.1,
+            "bmi_category": "Obese",
+            "health_risk": "High risk"
+        }
+    ]
+]

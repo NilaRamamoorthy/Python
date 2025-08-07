@@ -1,0 +1,4 @@
+Hello world! This is a sample text file.
+It contains multiple lines and words.
+Python makes it easy to read and write files.
+Have fun exploring file handling!
